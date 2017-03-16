@@ -123,11 +123,11 @@
   <data name="DoctorPage_Doctor" xml:space="preserve">
     <value>Doktor</value>
   </data>
-  <data name="NotesPage_DoctorNote" xml:space="preserve">
-    <value>Poznámka pro lékaře</value>
-  </data>
   <data name="NotesPage_Notes" xml:space="preserve">
     <value>Poznámky</value>
+  </data>
+  <data name="NotesPage_PatientNote" xml:space="preserve">
+    <value>Poznámka pro pacienta</value>
   </data>
   <data name="NotesPage_PharmacistNote" xml:space="preserve">
     <value>Poznámka pro lékárníka</value>

@@ -11,50 +11,25 @@ namespace ListViewApp.All.Views
         public const int INIT_POSITION = -300;
         public const int INIT_POSITION_IOS = -299;
 
+        private bool ios = false;
+
         protected override void InitializeCell()
         {
             InitializeComponent();
-            Appearing += Device.OnPlatform<EventHandler>(ListItemView_Appearing_iOS, ListItemView_Appearing, ListItemView_Appearing);
-            Disappearing += ListItemView_Disappearing;
+            ios = Device.OS == TargetPlatform.iOS;
         }
 
         protected override void SetupCell(bool isRecycled)
         {
-            View.TranslationX = -300;
-            View.TranslateTo(0, 0, 250, Easing.SinOut);
-        }
-
-        private void ListItemView_Disappearing(object sender, EventArgs e)
-        {
-            var listItem = sender as ViewCell;
-            if (listItem.View.TranslationX == INIT_POSITION_IOS)
+            if (ios)
             {
-                listItem.View.TranslationX = INIT_POSITION_IOS;
+                View.TranslateTo(INIT_POSITION * 2, 0, 0, Easing.SinOut)
+                    .ContinueWith((s) => View.TranslateTo(INIT_POSITION, 0, EASING_TIME, Easing.SinOut));
             }
             else
             {
-                listItem.View.TranslationX = 0;
-            }
-        }
-
-        private void ListItemView_Appearing(object sender, EventArgs e)
-        {
-            var listItem = sender as ViewCell;
-            if (listItem.View.TranslationX == INIT_POSITION)
-            {
-                listItem.View.FadeTo(1, EASING_TIME);
-                listItem.View.TranslateTo(0, 0, EASING_TIME, Easing.SinOut);                
-            }            
-        }
-
-        private void ListItemView_Appearing_iOS(object sender, EventArgs e)
-        {
-            var listItem = sender as ViewCell;
-            if (listItem.View.TranslationX == INIT_POSITION)
-            {
-                listItem.View.TranslationX = INIT_POSITION * 2;
-                listItem.View.FadeTo(1, EASING_TIME);
-                listItem.View.TranslateTo(INIT_POSITION, 0, EASING_TIME, Easing.SinOut).ContinueWith((s) => listItem.View.TranslationX = INIT_POSITION_IOS);
+                View.TranslationX = INIT_POSITION;
+                View.TranslateTo(0, 0, 250, Easing.SinOut);
             }
         }
     }

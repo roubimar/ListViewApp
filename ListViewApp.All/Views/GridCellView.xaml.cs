@@ -36,11 +36,13 @@ namespace ListViewApp.All.Views
             base.OnPropertyChanged(propertyName);
             if(propertyName == nameof(Text))
             {
-                TextLabel.Text = Text;
+                if(TextLabel != null)
+                    TextLabel.Text = Text;
             }
             else if (propertyName == nameof(Header))
             {
-                HeaderLabel.Text = Header;
+                if (HeaderLabel != null)
+                    HeaderLabel.Text = Header;
             }
         }
     }

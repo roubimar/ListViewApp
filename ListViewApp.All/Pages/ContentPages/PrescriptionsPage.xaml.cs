@@ -27,7 +27,8 @@ namespace ListViewApp.All.Pages.ContentPages
                 ItemsSource = prescriptions,
                 ItemTemplate = new DataTemplate(typeof(ListItemViewCell)),
                 SeparatorVisibility = SeparatorVisibility.None,
-                HasUnevenRows = true,                   
+                HasUnevenRows = true,         
+                RowHeight = 105
             };
 
             listView.ItemTapped += (object sender, ItemTappedEventArgs e) => {
@@ -73,7 +74,7 @@ namespace ListViewApp.All.Pages.ContentPages
                 Items = "Yaz 0,02; Potahované tablety 20mg",
                 DateTime = DateTime.Now,
                 State = "Vydaný",
-                Doctor = "Zdeněk Hřib"
+                Doctor = $"Zdeněk Hřib {i}"
             };
         }
         

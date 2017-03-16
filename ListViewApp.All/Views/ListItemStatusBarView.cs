@@ -12,7 +12,7 @@ namespace ListViewApp.All.Views
 
         public ListItemStatusBarView()
         {
-            statusBar = new BoxView() { BackgroundColor = Color.Black };
+            statusBar = new BoxView() { BackgroundColor = (Color)Application.Current.Resources["Primary"] };
             Content = statusBar;
             //BindingContextChanged += ListItemStatusBarView_BindingContextChanged;
         }

@@ -6,6 +6,6 @@
 
     <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
         <StackLayout Orientation="Horizontal" x:Name="Icons"/>
-        <Label x:Name="StatusText" FontSize="12" FontAttributes="Bold" TextColor="Black"/>
+        <Label x:Name="StatusText" FontSize="11" FontAttributes="Bold" TextColor="Black"/>
     </StackLayout>
 </ContentView>

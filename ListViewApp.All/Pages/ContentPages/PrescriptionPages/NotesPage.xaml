@@ -5,22 +5,20 @@
              xmlns:l="clr-namespace:ListViewApp.All.Resx"
              Title = "{l:Resource NotesPage_Notes}"
              Icon = "notes.png">
-    <ScrollView HorizontalOptions="FillAndExpand">
-        <StackLayout HorizontalOptions="FillAndExpand" >
-            <TableView HorizontalOptions="FillAndExpand" x:Name="TableRoot">
-                <TableRoot >
-                    <TableSection Title="{l:Resource NotesPage_PharmacistNote}">
-                        <ViewCell>
-                            <Label Text="{Binding DoctorNote}" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
-                        </ViewCell>
-                    </TableSection>
-                    <TableSection Title="{l:Resource NotesPage_DoctorNote}">
-                        <ViewCell>
-                            <Label Text="{Binding PatientNote}" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
-                        </ViewCell>
-                    </TableSection>
-                </TableRoot>
-            </TableView>
+    <ScrollView>
+        <StackLayout>
+            <Frame Margin="10" HasShadow="True" Padding="5">
+                <StackLayout>
+                    <Label Text="{l:Resource NotesPage_PharmacistNote}" Style="{StaticResource headerStyle}" />
+                    <Label LineBreakMode="WordWrap" Text="{Binding PharmacistNote}" Style="{StaticResource valueStyle}"/>
+                </StackLayout>              
+            </Frame>
+            <Frame Margin="10" HasShadow="True" Padding="5">
+                <StackLayout>
+                    <Label Text="{l:Resource NotesPage_PatientNote}" Style="{StaticResource headerStyle}" />
+                    <Label LineBreakMode="WordWrap" Text="{Binding PatientNote}" Style="{StaticResource valueStyle}"/>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ScrollView>
 </ContentPage>

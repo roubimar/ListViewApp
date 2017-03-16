@@ -48,7 +48,7 @@ namespace ListViewApp.All.Helpers
             }
             else
             {
-                return Color.FromHex("#CCFFDEAD");
+                return Color.FromHex("#CCEDF4FF");
             }
         }
     }

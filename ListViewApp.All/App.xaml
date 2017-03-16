@@ -16,18 +16,13 @@
                 <!--<Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />-->
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
-            <Style TargetType="TextCell">
-                <!--<Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />-->
-                <Setter Property="TextColor" Value="{StaticResource DarkBackgroundColor}" />
-            </Style>
             
             <Style TargetType="Label" x:Key="headerStyle">
-                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="FontSize" Value="13"/>
                 <Setter Property="TextColor" Value="{StaticResource Accent}"/>
-                <Setter Property="HeightRequest" Value="15"/>
                 <Setter Property="VerticalTextAlignment" Value="End"/>
             </Style>
-            <Style TargetType="Entry" x:Key="valueStyle">
+            <Style TargetType="Label" x:Key="valueStyle">
                 <Setter Property="FontSize" Value="15"/>
                 <Setter Property="TextColor" Value="{StaticResource Primary}"/>
             </Style>

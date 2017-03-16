@@ -1,6 +1,9 @@
 ﻿
+using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
+[assembly: InternalsVisibleTo("ListViewApp.iOS")]
+[assembly: InternalsVisibleTo("ListViewApp.Droid")]
 namespace ListViewApp.All.Controls
 {
     /*
@@ -48,6 +51,8 @@ namespace ListViewApp.All.Controls
         /// </summary>
         /// <param name="isRecycled">If set to <c>true</c> is recycled.</param>
         protected abstract void SetupCell(bool isRecycled);
+
+        internal object OriginalBindingContext;
     }
 }
 

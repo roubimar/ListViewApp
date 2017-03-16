@@ -80,20 +80,20 @@ namespace ListViewApp.All.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poznámka pro lékaře.
-        /// </summary>
-        internal static string NotesPage_DoctorNote {
-            get {
-                return ResourceManager.GetString("NotesPage_DoctorNote", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Poznámky.
         /// </summary>
         internal static string NotesPage_Notes {
             get {
                 return ResourceManager.GetString("NotesPage_Notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poznámka pro pacienta.
+        /// </summary>
+        internal static string NotesPage_PatientNote {
+            get {
+                return ResourceManager.GetString("NotesPage_PatientNote", resourceCulture);
             }
         }
         
