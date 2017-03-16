@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewApp.All.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#003181</Color>
+            <Color x:Key="PrimaryDark">#003181</Color>
+            <Color x:Key="Accent">#f18e00</Color>
+            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
+            <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
+            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+
+            <Style TargetType="NavigationPage">
+                <!--<Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />-->
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+            <Style TargetType="TextCell">
+                <!--<Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />-->
+                <Setter Property="TextColor" Value="{StaticResource DarkBackgroundColor}" />
+            </Style>
+            
+            <Style TargetType="Label" x:Key="headerStyle">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="TextColor" Value="{StaticResource Accent}"/>
+                <Setter Property="HeightRequest" Value="15"/>
+                <Setter Property="VerticalTextAlignment" Value="End"/>
+            </Style>
+            <Style TargetType="Entry" x:Key="valueStyle">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="{StaticResource Primary}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

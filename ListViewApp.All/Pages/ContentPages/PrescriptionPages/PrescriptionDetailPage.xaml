@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewApp.All.Pages.ContentPages.PrescriptionPages.PrescriptionDetailPage"
+             xmlns:views="clr-namespace:ListViewApp.All.Views"
+             xmlns:l="clr-namespace:ListViewApp.All.Resx"
+             Title = "{l:Resource PrescriptionDetailPage_Prescription}"
+             Icon="prescription.png">
+    <ScrollView>
+        <StackLayout>
+            <Frame Margin="10" HasShadow="True" Padding="5" IsEnabled="False">
+                <Grid Margin="0,5,0,5" RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="160"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <views:GridCellView Grid.Column="0" Grid.Row="0" Header="{l:Resource PrescriptionDetailPage_ID}" Text="{Binding ID}"/>
+                    <views:GridCellView Grid.Column="1" Grid.Row="0" Header="{l:Resource PrescriptionDetailPage_ID_128}" Text="{Binding ID_128}"/>
+                    <views:GridCellView Grid.Column="0" Grid.Row="1" Header="{l:Resource PrescriptionDetailPage_Exposed}" Text="{Binding Exposed, StringFormat='{0:dd/MM/yyyy}'}"/>
+                    <views:GridCellView Grid.Column="1" Grid.Row="1" Header="{l:Resource PrescriptionDetailPage_Validity}" Text="{Binding Expiration, StringFormat='{0:dd/MM/yyyy}'}"/>
+                    <views:GridCellView Grid.Column="0" Grid.Row="2" Header="{l:Resource PrescriptionDetailPage_State}" Text="{Binding State}"/>
+                    <views:GridCellView Grid.Column="1" Grid.Row="2" Header="{l:Resource PrescriptionDetailPage_SMS_ID}" Text="{Binding SMS_ID}"/>
+                    <views:GridCellView Grid.Column="0" Grid.Row="3" Header="{l:Resource PrescriptionDetailPage_Repetitions}" Text="{Binding Repetitions}"/>
+                    <views:GridCellView Grid.Column="1" Grid.Row="3" Header="{l:Resource PrescriptionDetailPage_Symbols}" Text="{Binding Symbols}"/>
+                    <views:GridCellView Grid.Column="0" Grid.Row="4" Header="{l:Resource PrescriptionDetailPage_Issues}" Text=""/>
+                    <views:GridCellView Grid.Column="1" Grid.Row="4" Header="{l:Resource PrescriptionDetailPage_Listings}" Text="{Binding Listings}"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewApp.All.Pages.ContentPages.PrescriptionPages.NotesPage"
+             xmlns:l="clr-namespace:ListViewApp.All.Resx"
+             Title = "{l:Resource NotesPage_Notes}"
+             Icon = "notes.png">
+    <ScrollView HorizontalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand" >
+            <TableView HorizontalOptions="FillAndExpand" x:Name="TableRoot">
+                <TableRoot >
+                    <TableSection Title="{l:Resource NotesPage_PharmacistNote}">
+                        <ViewCell>
+                            <Label Text="{Binding DoctorNote}" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="{l:Resource NotesPage_DoctorNote}">
+                        <ViewCell>
+                            <Label Text="{Binding PatientNote}" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

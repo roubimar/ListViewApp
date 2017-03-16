@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ListViewApp.All.Views.GridCellView"
+             VerticalOptions="FillAndExpand"
+             Spacing="0">
+    <Label x:Name="HeaderLabel" Text="{Binding Header}" Style="{StaticResource headerStyle}"/>
+    <Label x:Name="TextLabel" Text="{Binding Text}" Style="{StaticResource valueStyle}"/>
+</StackLayout>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:views="clr-namespace:ListViewApp.All.Views"
+             x:Class="ListViewApp.All.Views.ListItemViewCell">
+    <Grid Margin="0,0,0,5" RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand" Opacity="0" TranslationX="-300">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <views:ListItemStatusBarView HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"/>
+        <views:ListItemDetailView Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <views:ListItemStatusView Grid.Column="1" Grid.Row="1"/>
+        <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="2" Grid.Row="1" BackgroundColor="Black"/>
+    </Grid>
+</ViewCell>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:views="clr-namespace:ListViewApp.All.Views"
+             x:Class="ListViewApp.All.Views.CureViewCell">
+    <Frame Margin="10" HasShadow="True" Padding="5" IsEnabled="False">
+        <Frame.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Label" x:Key="headerStyle">
+                    <Setter Property="FontSize" Value="10"/>
+                    <Setter Property="TextColor" Value="{StaticResource Accent}"/>
+                </Style>
+                <Style TargetType="Label" x:Key="valueStyle">
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="TextColor" Value="{StaticResource Primary}"/>
+                </Style>
+            </ResourceDictionary>
+        </Frame.Resources>
+        <Grid Margin="0,5,0,5" RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="120" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+            <views:GridCellView Header="Kód SUKL" Text="{Binding Code}" Grid.Column="0" Grid.Row="0" />
+            <views:GridCellView Header="ATC" Text="G03AA12" Grid.Column="2" Grid.Row="0" />
+            <views:GridCellView Header="Název přípravku" Text="YAZ" Grid.Column="0" Grid.Row="1" />
+            <views:GridCellView Header="Léková forma" Text="TBL FLM" Grid.Column="0" Grid.Row="2" />
+            <views:GridCellView Header="Cesta podání" Text="POR" Grid.Column="2" Grid.Row="2" />
+            <views:GridCellView Header="Velikost balení" Text="3X28" Grid.Column="0" Grid.Row="3" />
+            <views:GridCellView Header="Množ." Text="1" Grid.Column="1" Grid.Row="3" />
+            <views:GridCellView Header="Síla" Text="0,02MG/3MG" Grid.Column="2" Grid.Row="3" />
+        </Grid>
+    </Frame>
+</ViewCell>
+
+<!--Code 
+Atc 
+Name
+Form
+Usage 
+Size 
+Amount
+Power--> 
