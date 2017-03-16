@@ -38,6 +38,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FastCell.cs" />
+    <Compile Include="Controls\IFastCellCache.cs" />
     <Compile Include="Helpers\DateTimeConverter.cs" />
     <Compile Include="Helpers\PrescriptionHelper.cs" />
     <Compile Include="Models\Cure.cs" />

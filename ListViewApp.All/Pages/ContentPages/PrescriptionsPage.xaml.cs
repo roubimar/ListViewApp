@@ -17,9 +17,9 @@ namespace ListViewApp.All.Pages.ContentPages
 			InitializeComponent();
 
             prescriptions = new List<PrescriptionViewModel>();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
-                prescriptions.Add(new PrescriptionViewModel(CreatePrescription()));
+                prescriptions.Add(new PrescriptionViewModel(CreatePrescription(i)));
             }
 
             var listView = new ListView()
@@ -47,7 +47,7 @@ namespace ListViewApp.All.Pages.ContentPages
         private void ListView_Refreshing(object sender, EventArgs e)
         {
             var listView = sender as ListView;
-            listView.ItemsSource = listView.ItemsSource == prescriptions ? new List<PrescriptionViewModel>() { new PrescriptionViewModel(CreatePrescription()) } : prescriptions;
+            listView.ItemsSource = listView.ItemsSource == prescriptions ? new List<PrescriptionViewModel>() { new PrescriptionViewModel(CreatePrescription(1)) } : prescriptions;
 
             var list = (ListView)sender;
             var items = (IEnumerable<PrescriptionViewModel>)list.ItemsSource;
@@ -65,11 +65,11 @@ namespace ListViewApp.All.Pages.ContentPages
             list.IsRefreshing = false;
         }
 
-        private Prescription CreatePrescription()
+        private Prescription CreatePrescription(int i)
         {
             return new Prescription
             {
-                ID = "0129845562",
+                ID = $"0129845562 {i}",
                 Items = "Yaz 0,02; Potahované tablety 20mg",
                 DateTime = DateTime.Now,
                 State = "Vydaný",

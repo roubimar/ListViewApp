@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+<controls:FastCell xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:ListViewApp.All.Controls"
              xmlns:views="clr-namespace:ListViewApp.All.Views"
              x:Class="ListViewApp.All.Views.ListItemViewCell">
     <Grid Margin="0,0,0,5" RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand" Opacity="0" TranslationX="-300">
@@ -18,4 +19,4 @@
         <views:ListItemStatusView Grid.Column="1" Grid.Row="1"/>
         <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="2" Grid.Row="1" BackgroundColor="Black"/>
     </Grid>
-</ViewCell>
+</controls:FastCell>

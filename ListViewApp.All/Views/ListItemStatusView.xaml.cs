@@ -20,6 +20,9 @@ namespace ListViewApp.All.Views
         {
             var model = BindingContext as PrescriptionViewModel;
             if (model == null) return;
+
+            Icons.Children.Clear();
+
             var statusTextCollection = new List<string>();
             foreach (PrescriptionStatus x in Enum.GetValues(typeof(PrescriptionStatus)))
             {

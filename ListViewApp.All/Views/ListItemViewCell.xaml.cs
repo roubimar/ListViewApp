@@ -1,20 +1,27 @@
-﻿using System;
+﻿using ListViewApp.All.Controls;
+using System;
 
 using Xamarin.Forms;
 
 namespace ListViewApp.All.Views
 {
-    public partial class ListItemViewCell : ViewCell
+    public partial class ListItemViewCell : FastCell
     {
         public const int EASING_TIME = 250;
         public const int INIT_POSITION = -300;
         public const int INIT_POSITION_IOS = -299;
 
-        public ListItemViewCell()
+        protected override void InitializeCell()
         {
             InitializeComponent();
             Appearing += Device.OnPlatform<EventHandler>(ListItemView_Appearing_iOS, ListItemView_Appearing, ListItemView_Appearing);
             Disappearing += ListItemView_Disappearing;
+        }
+
+        protected override void SetupCell(bool isRecycled)
+        {
+            View.TranslationX = -300;
+            View.TranslateTo(0, 0, 250, Easing.SinOut);
         }
 
         private void ListItemView_Disappearing(object sender, EventArgs e)
